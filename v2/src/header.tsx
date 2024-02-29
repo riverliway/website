@@ -25,7 +25,18 @@ export const Header: React.FC<HeaderProps> = props => {
           scale: 1.05,
           transition: { duration: 0.05 },
         }}>
-          <a href='https://github.com/riverliway'><GitHubIcon fontSize='large' /></a>
+          <a href='https://github.com/riverliway'>
+            <GitHubIcon
+              fontSize='large'
+              sx={[{
+                color: '#8a0699'
+              }, {
+                '&:hover': {
+                  color: '#650470',
+                }
+              }]}
+            />
+          </a>
         </motion.li>
       </ul>
     </nav>
