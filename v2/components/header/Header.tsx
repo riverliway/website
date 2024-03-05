@@ -1,7 +1,9 @@
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { motion } from 'framer-motion'
-import { ThemeSwitch } from './themeSwitch'
+import { ThemeSwitch } from './ThemeSwitch'
+import { LinkedIn, Twitter } from '@mui/icons-material'
+import { ButtonIcon } from '../common/ButtonIcon'
 
 interface HeaderProps {
   theme: 'dark' | 'light'
@@ -14,31 +16,17 @@ export const Header: React.FC<HeaderProps> = props => {
       <div className='flex flex-row justify-center align-center'>
         logo
       </div>
-      <ul className='flex flex-row justify-center align-center gap-2'>
-        <motion.li whileHover={{
+      <div className='flex flex-row justify-center align-center gap-2'>
+        <motion.div whileHover={{
           scale: 1.05,
           transition: { duration: 0.05 },
         }}>
           <ThemeSwitch theme={props.theme} updateTheme={props.updateTheme} />
-        </motion.li>
-        <motion.li whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.05 },
-        }}>
-          <a href='https://github.com/riverliway'>
-            <GitHubIcon
-              fontSize='large'
-              sx={[{
-                color: '#8a0699'
-              }, {
-                '&:hover': {
-                  color: '#650470',
-                }
-              }]}
-            />
-          </a>
-        </motion.li>
-      </ul>
+        </motion.div>
+        <ButtonIcon href='https://www.linkedin.com/in/river-schieberl/' children={LinkedIn} />
+        <ButtonIcon href='https://twitter.com/riverliway' children={Twitter} />
+        <ButtonIcon href='https://github.com/riverliway' children={GitHubIcon} />
+      </div>
     </nav>
   )
 }

@@ -1,8 +1,9 @@
-import { Header } from './header'
+import React, { useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material'
-import { useMemo, useState } from 'react'
 
-export default function Home() {
+import { Header } from '../header/Header'
+
+export const Page: React.FC = () => {
   const [theme, setTheme] = useState(detectColorScheme())
 
   const updateTheme = (theme: 'dark' | 'light'): void => {
