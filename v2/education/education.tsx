@@ -1,6 +1,16 @@
-import React from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Page } from '../components/page/Page'
 import '../globals.css'
 
-React.createRoot(document.getElementById('root')!).render(
-  <h1>experience</h1>,
+const Education: React.FC = () => {
+  return (
+    <Page>
+      <h1>education</h1>
+    </Page>
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <Education />,
 )

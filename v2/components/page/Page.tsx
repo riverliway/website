@@ -1,13 +1,22 @@
-import React, { useMemo, useState } from 'react'
+import React, { ReactNode, useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material'
 
 import { Header } from '../header/Header'
+import { Body } from './Body'
 
-export const Page: React.FC = () => {
+interface PageProps {
+  children: ReactNode
+}
+
+/**
+ * The wrapper component for the entire application.
+ * This should be wrapped around each page.
+ * @prop children - The content of the page.
+ */
+export const Page: React.FC<PageProps> = props => {
   const [theme, setTheme] = useState(detectColorScheme())
 
   const updateTheme = (theme: 'dark' | 'light'): void => {
-    console.log(theme)
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
     setTheme(theme)
@@ -25,9 +34,9 @@ export const Page: React.FC = () => {
     <ThemeProvider theme={muiTheme}>
       <main className='w-full h-screen'>
         <Header theme={theme} updateTheme={updateTheme} />
-        <div className='pt-8'>
-          hiasdfsadf
-        </div>
+        <Body>
+          {props.children}
+        </Body>
       </main>
     </ThemeProvider>
   )
