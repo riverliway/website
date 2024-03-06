@@ -16,7 +16,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = props => {
       target={props.newTab ? '_blank' : ''}
       rel={props.newTab ? 'noreferrer nofollow' : ''}
       whileHover={{
-        scale: 1.05,
+        scale: 1.08,
         transition: { duration: 0.05 },
       }}
     >

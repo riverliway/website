@@ -5,6 +5,7 @@ import { ThemeSwitch } from './ThemeSwitch'
 import { LinkedIn, Twitter } from '@mui/icons-material'
 import { ButtonIcon } from '../common/ButtonIcon'
 import { useMediaQuery } from '@mui/material'
+import { Signature } from '../signature/Signature'
 
 interface HeaderProps {
   theme: 'dark' | 'light'
@@ -15,11 +16,11 @@ export const Header: React.FC<HeaderProps> = props => {
   const isSmallPhone = useMediaQuery('(max-width: 320px)')
 
   return (
-    <nav className='absolute w-full flex justify-center'>
+    <nav className='absolute w-full flex justify-center border-b border-gray-600'>
       <div className='w-full md:w-9/12 flex flex-row justify-between align-center p-2'>
         {!isSmallPhone && (
           <div className='flex flex-row justify-center align-center'>
-            logo
+            <Signature />
           </div>
         )}
         <div className={`flex flex-row align-center gap-2 ${isSmallPhone ? 'justify-around w-full' : 'justify-center'}`}>
