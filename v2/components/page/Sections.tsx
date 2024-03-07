@@ -10,7 +10,7 @@ interface SectionsProps {
 export const Sections: React.FC<SectionsProps> = props => {
   return (
     <motion.div
-      className='w-full flex flex-col gap-4'
+      className='w-full flex flex-col gap-20'
       initial='hidden'
       animate='visible'
       variants={sectionVariant}

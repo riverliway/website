@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SVGMotionProps, motion } from 'framer-motion'
-import { DrawnPath } from './DrawnPath'
 import { createDurationDelays } from './createDurationDelays'
 
 export const Signature: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false)
   const durationDelays = createDurationDelays([0.2, 1.5, 0.7, 0.3, 0.3])
-  const pathProps: SVGMotionProps<SVGPathElement> = {
-    strokeLinecap: 'round',
-    stroke: '#8a0699'
-  }
 
   const paths = [
     'm 0 35 q 5.6 -5.6 8.4 -13.3 T 14.7 8.4 T 24.5 4.2 T 28.7 14 T 17 23 T 5 22 T 6 19 T 12 20 T 15 24 T 18 29 T 25 33 T 33 32 T 39 25 Q 42 34 43 33 Q 44 34 47 25 Q 51 28 54 28 T 58 27 T 57 24 T 52 25 T 51 31 T 59 33 Q 63 33 63 31 T 64 25 T 70 23',
@@ -27,15 +23,52 @@ export const Signature: React.FC = () => {
         scale: 1.08,
         transition: { duration: 0.05 },
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {paths.map((d, i) => (
-        <DrawnPath
-          key={i}
-          duration={durationDelays[i].duration}
-          delay={durationDelays[i].delay}
-          d={d}
-          {...pathProps}
-        />
+        <>
+          <motion.path
+            key={i}
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1, strokeWidth: 2 }}
+            d={d}
+            transition={{
+              duration: durationDelays[i].duration,
+              ease: 'linear',
+              delay: durationDelays[i].delay
+            }}
+            strokeLinecap='round'
+            stroke='#8a0699'
+          />
+          <motion.path
+            key={i + paths.length}
+            animate={isHovered ? 'revealed' : 'initial'}
+            variants={{
+              initial: {
+                pathLength: 0,
+                strokeWidth: 0,
+                transition: {
+                  duration: durationDelays[i].duration * 0.25,
+                  ease: 'linear',
+                  delay: durationDelays[durationDelays.length - i - 1].delay * 0.125
+                }
+              },
+              revealed: {
+                pathLength: 1,
+                strokeWidth: 2,
+                transition: {
+                  duration: durationDelays[i].duration * 0.25,
+                  ease: 'linear',
+                  delay: durationDelays[i].delay * 0.25
+                }
+              }
+            }}
+            d={d}
+            strokeLinecap='round'
+            stroke='#e9d5ff'
+          />
+        </>
       ))}
     </motion.svg>
   )
