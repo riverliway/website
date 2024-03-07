@@ -48,10 +48,10 @@ export const Section: React.FC<SectionProps> = props => {
             {subtitleRow.map((subtitle, i) => {
               if (i !== 0) {
                 return (
-                  <>
-                    <div key={-i}>&middot;</div>
-                    <div key={i}>{subtitle}</div>
-                  </>
+                  <React.Fragment key={i}>
+                    <div>&middot;</div>
+                    <div>{subtitle}</div>
+                    </React.Fragment>
                 )
               }
 

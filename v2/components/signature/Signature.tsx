@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { SVGMotionProps, motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { createDurationDelays } from './createDurationDelays'
 
 export const Signature: React.FC = () => {
+  const [canShow, setCanShow] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const durationDelays = createDurationDelays([0.2, 1.5, 0.7, 0.3, 0.3])
 
@@ -13,6 +14,10 @@ export const Signature: React.FC = () => {
     'M 88.174 15.888 q -0.469 0.427 -0.939 1.153 t 0.128 1.836 t 1.836 0.684 t 1.41 -0.897 t 0.256 -1.324 t -0.811 -1.538'
   ]
 
+  // I have no idea why this is necessary, but it is
+  // The highlight hover animation gets stuck in the revealed state without it
+  useEffect(() => setCanShow(true), [])
+
   return (
     <motion.svg
       width='110'
@@ -21,15 +26,14 @@ export const Signature: React.FC = () => {
       xmlns='http://www.w3.org/2000/svg'
       whileHover={{
         scale: 1.08,
-        transition: { duration: 0.05 },
+        transition: { duration: 0.15 },
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {paths.map((d, i) => (
-        <>
+        <React.Fragment key={i}>
           <motion.path
-            key={i}
             initial={{ pathLength: 0, strokeWidth: 0 }}
             animate={{ pathLength: 1, strokeWidth: 2 }}
             d={d}
@@ -41,34 +45,35 @@ export const Signature: React.FC = () => {
             strokeLinecap='round'
             stroke='#8a0699'
           />
-          <motion.path
-            key={i + paths.length}
-            animate={isHovered ? 'revealed' : 'initial'}
-            variants={{
-              initial: {
-                pathLength: 0,
-                strokeWidth: 0,
-                transition: {
-                  duration: durationDelays[i].duration * 0.25,
-                  ease: 'linear',
-                  delay: durationDelays[durationDelays.length - i - 1].delay * 0.125
+          {canShow && (
+            <motion.path
+              animate={isHovered ? 'revealed' : 'initial'}
+              variants={{
+                initial: {
+                  pathLength: 0,
+                  strokeWidth: 0,
+                  transition: {
+                    duration: durationDelays[i].duration * 0.25,
+                    ease: 'linear',
+                    delay: durationDelays[durationDelays.length - i - 1].delay * 0.125
+                  }
+                },
+                revealed: {
+                  pathLength: 1,
+                  strokeWidth: 2,
+                  transition: {
+                    duration: durationDelays[i].duration * 0.25,
+                    ease: 'linear',
+                    delay: durationDelays[i].delay * 0.25
+                  }
                 }
-              },
-              revealed: {
-                pathLength: 1,
-                strokeWidth: 2,
-                transition: {
-                  duration: durationDelays[i].duration * 0.25,
-                  ease: 'linear',
-                  delay: durationDelays[i].delay * 0.25
-                }
-              }
-            }}
-            d={d}
-            strokeLinecap='round'
-            stroke='#e9d5ff'
-          />
-        </>
+              }}
+              d={d}
+              strokeLinecap='round'
+              stroke='#e9d5ff'
+            />
+          )}
+        </React.Fragment>
       ))}
     </motion.svg>
   )
