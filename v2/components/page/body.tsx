@@ -1,6 +1,5 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { useMediaQuery } from '@mui/material'
-import { motion } from 'framer-motion'
 import { FanceUnderline } from '../signature/FancyUnderline'
 
 interface BodyProps {
@@ -15,7 +14,7 @@ export const Body: React.FC<BodyProps> = props => {
   const isPhone = useMediaQuery('(max-width: 530px)')
 
   return (
-    <div className='pt-20 w-full text-purple-200'>
+    <div className='pt-20 pb-96 w-full text-purple-200'>
       <div className='flex flex-col items-center max-w-screen-lg m-auto px-8 gap-24'>
         <div className={`w-9/12 flex ${isPhone ? 'flex-col gap-8 text-center' : 'flex-row justify-around'} items-center text-xl`}>
           <Nava href='/'>Projects</Nava>

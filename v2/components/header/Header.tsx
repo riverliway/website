@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = props => {
   const isSmallPhone = useMediaQuery('(max-width: 320px)')
 
   return (
-    <nav className='absolute w-full flex justify-center border-b border-gray-600'>
+    <nav className='fixed w-full flex justify-center border-b border-gray-600 backdrop-blur-md' style={{ backgroundColor: '#2300297f' }}>
       <div className='w-full md:w-9/12 flex flex-row justify-between align-center p-2'>
         {!isSmallPhone && (
           <a className='flex flex-row justify-center align-center cursor-pointer' href='/'>

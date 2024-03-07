@@ -1,7 +1,6 @@
 import React, { ReactNode, useState } from 'react'
 import { motion } from 'framer-motion'
 
-import { sectionVariant } from './sectionVariant'
 import { NewTabIcon } from '../drawnIcons/NewTabIcon'
 
 interface SectionProps {
@@ -19,7 +18,6 @@ export const Section: React.FC<SectionProps> = props => {
   return (
     <motion.div
       className='flex gap-8'
-      variants={sectionVariant}
     >
       <a
         href={props.titleLink}

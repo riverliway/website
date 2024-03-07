@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material'
 
 import { Header } from '../header/Header'
 import { Body } from './Body'
+import { Overlay } from './Overlay'
 
 interface PageProps {
   children: ReactNode
@@ -47,6 +48,7 @@ export const Page: React.FC<PageProps> = props => {
     <ThemeContext.Provider value={theme}>
       <ThemeProvider theme={muiTheme}>
         <main className='w-full h-screen'>
+          <Overlay />
           <Header theme={theme} updateTheme={updateTheme} />
           <Body>
             {props.children}
