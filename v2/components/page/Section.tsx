@@ -21,7 +21,7 @@ export const Section: React.FC<SectionProps> = props => {
         {props.icon}
       </div>
       <div className='flex flex-col gap-2'>
-        <a className='text-xl' href={props.titleLink}>
+        <a className='text-3xl' href={props.titleLink}>
           {props.title}
         </a>
         {props.subtitles?.map((subtitleRow, j) => (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { SVGMotionProps, motion } from 'framer-motion'
 import { DrawnPath } from './DrawnPath'
+import { createDurationDelays } from './createDurationDelays'
 
 export const Signature: React.FC = () => {
   const durationDelays = createDurationDelays([0.2, 1.5, 0.7, 0.3, 0.3])
@@ -18,12 +19,14 @@ export const Signature: React.FC = () => {
 
   return (
     <motion.svg
-      initial='initial'
-      animate='revealed'
-      width='300'
+      width='110'
       height='35'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      whileHover={{
+        scale: 1.08,
+        transition: { duration: 0.05 },
+      }}
     >
       {paths.map((d, i) => (
         <DrawnPath
@@ -36,24 +39,4 @@ export const Signature: React.FC = () => {
       ))}
     </motion.svg>
   )
-}
-
-/**
- * @param timings - The timings of the animations.
- * This is an array where the first element is the delay before the first animation starts, and the rest are the durations of the animations.
- * @returns An array of objects with the duration and delay of each animation.
- */
-const createDurationDelays = (timings: number[]): { duration: number, delay: number }[] => {
-  const durations = timings.slice(1)
-  const cumulativeDelays: number[] = []
-
-  for (let i = 0; i < timings.length - 1; i++) {
-    const delay = timings[i] + (i > 0 ? cumulativeDelays[i - 1] : 0)
-    cumulativeDelays.push(delay)
-  }
-
-  return durations.map((duration, i) => ({
-    duration,
-    delay: cumulativeDelays[i]
-  }))
 }

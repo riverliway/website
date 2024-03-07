@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
+import { FanceUnderline } from '../signature/FancyUnderline'
 
 interface BodyProps {
   children: ReactNode
@@ -33,28 +34,12 @@ interface NavaProps {
 }
 
 const Nava: React.FC<NavaProps> = props => {
-  const ref = useRef<HTMLAnchorElement | null>(null)
-  const [width, setWidth] = useState(0)
-
-  useEffect(() => {
-    setWidth(Math.floor(ref.current?.getBoundingClientRect()?.width ?? 0))
-  }, [])
+  const [isHover, setIsHover] = useState(false)
 
   return (
-    <a ref={ref} href={props.href} className='w-fit'>
-      <motion.div
-        style={{
-          borderBottom: '1px solid white',
-          position: 'absolute',
-          height: '28px',
-          width
-        }}
-        whileHover={{
-          width: '0%',
-          transition: { duration: 1 }
-        }}
-      ></motion.div>
-      {props.children}
+    <a href={props.href} className='w-fit flex flex-col items-center' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+      <div>{props.children}</div>
+      <FanceUnderline isHover={isHover} />
     </a>
   )
 }

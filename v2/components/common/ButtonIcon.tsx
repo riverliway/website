@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { OverridableComponent } from '@mui/material/OverridableComponent'
-import { SvgIconTypeMap } from '@mui/material'
 
 interface ButtonIconProps {
-  children: OverridableComponent<SvgIconTypeMap<{}, "svg">>
+  children: ReactNode
   href?: string
   newTab?: boolean
 }
@@ -20,16 +18,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = props => {
         transition: { duration: 0.05 },
       }}
     >
-      <props.children
-        fontSize='large'
-        sx={[{
-          color: '#8a0699'
-        }, {
-          '&:hover': {
-            color: '#650470',
-          }
-        }]}
-      />
+      {props.children}
     </motion.a>
   )
 }
