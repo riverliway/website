@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { createDurationDelays } from './createDurationDelays'
 
-export const Signature: React.FC = () => {
+interface SignatureProps {
+  shouldInitialAnimate?: boolean
+}
+
+export const Signature: React.FC<SignatureProps> = props => {
+  const animate = props.shouldInitialAnimate ?? true
   const [canShow, setCanShow] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const durationDelays = createDurationDelays([0.2, 1.5, 0.7, 0.3, 0.3])
@@ -38,9 +43,9 @@ export const Signature: React.FC = () => {
             animate={{ pathLength: 1, strokeWidth: 2 }}
             d={d}
             transition={{
-              duration: durationDelays[i].duration,
+              duration: animate ? durationDelays[i].duration : 0,
               ease: 'linear',
-              delay: durationDelays[i].delay
+              delay: animate ? durationDelays[i].delay : 0
             }}
             strokeLinecap='round'
             stroke='#8a0699'

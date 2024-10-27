@@ -4,12 +4,14 @@ import { SVGMotionProps, motion } from 'framer-motion'
 interface DrawnIconProps {
   d: string
   delay: number
+  animate?: boolean
 }
 
 /**
  * An animated icon
  */
 export const DrawnIcon: React.FC<DrawnIconProps> = props => {
+  const animate = props.animate ?? true
   const pathProps: SVGMotionProps<SVGPathElement> = {
     strokeLinecap: 'square',
     stroke: '#8a0699'
@@ -20,9 +22,9 @@ export const DrawnIcon: React.FC<DrawnIconProps> = props => {
       initial={{ strokeWidth: 0 }}
       animate={{ strokeWidth: [null, 0.5] }}
       transition={{
-        duration: 2.3,
+        duration: animate ? 2.3 : 0,
         times: [0.1, 1],
-        delay: props.delay,
+        delay: animate ? props.delay : 0,
         ease: 'linear'
       }}
     >
@@ -35,18 +37,18 @@ export const DrawnIcon: React.FC<DrawnIconProps> = props => {
         initial={{ fillOpacity: 0 }}
         animate={{ fillOpacity: 1 }}
         transition={{
-          duration: 1,
+          duration: animate ? 1 : 0,
           ease: 'linear',
-          delay: props.delay + 1.5
+          delay: animate ? props.delay + 1.5 : 0
         }}
       >
         <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{
-            duration: 1.5,
+            duration: animate ? 1.5 : 0,
             ease: 'linear',
-            delay: props.delay + 0.5
+            delay: animate ? props.delay + 0.5 : 0
           }}
           d={props.d}
           {...pathProps}

@@ -17,9 +17,9 @@ export const Body: React.FC<BodyProps> = props => {
     <div className='pt-20 pb-96 w-full text-purple-200'>
       <div className='flex flex-col items-center max-w-screen-lg m-auto px-8 gap-24'>
         <div className={`w-9/12 flex ${isPhone ? 'flex-col gap-8 text-center' : 'flex-row justify-around'} items-center text-xl`}>
-          <Nava href='/'>Projects</Nava>
-          <Nava href='/experience'>Experience</Nava>
-          <Nava href='/education'>Education</Nava>
+          <Nava href='/?self=1'>Projects</Nava>
+          <Nava href='/experience?self=1'>Experience</Nava>
+          <Nava href='/education?self=1'>Education</Nava>
         </div>
         {props.children}
       </div>
