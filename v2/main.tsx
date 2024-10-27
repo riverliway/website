@@ -5,13 +5,29 @@ import { Page } from './components/page/Page'
 import { Sections } from './components/page/Sections'
 import { Section } from './components/page/Section'
 import { DisplayIcon } from './components/common/DisplayIcon'
-
 import './globals.css'
 
 const Main: React.FC = () => {
   return (
     <Page>
       <Sections>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 300 300' width={300} height={300}>
+          <clipPath id='clippy'>
+            <path
+              fill="#171717"
+              d='M 100.902 136.424 Q 109.859 129.541 120.354 133.76 Q 130.811 139.027 129.877 152.177 Q 127.676 164.695 110.371 167.102 A 0.448 0.448 0 1 1 110.229 166.218 Q 125.815 163.317 126.163 151.783 Q 127.778 140.882 118.886 136.8 Q 110.033 131.67 101.418 137.156 A 0.448 0.448 0 1 1 100.902 136.424'
+            />
+          </clipPath>
+          <path
+            clip-path='url(#clippy)'
+            class="squiggle"
+            stroke='white'
+            fill="none"
+            stroke-miterlimit="10"
+            strokeWidth={10}
+            d='M 101.16 136.79 Q 110.02 130.62 119.62 135.28 T 128.02 151.98 T 110.3 166.57'
+          />
+        </svg>
         <Section
           icon={<DisplayIcon src='./qc.svg' />}
           title='Quantum Computing Survival Guide'

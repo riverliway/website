@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ThemeSwitch } from './ThemeSwitch'
 import { ButtonIcon } from '../common/ButtonIcon'
@@ -12,7 +12,12 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = props => {
+  const [shouldAnimate, setShouldAnimate] = useState(false)
   const isSmallPhone = useMediaQuery('(max-width: 320px)')
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+  }, [])
 
   return (
     <nav className='fixed w-full flex justify-center border-b border-gray-600 backdrop-blur-md' style={{ backgroundColor: '#2300297f' }}>
@@ -51,4 +56,11 @@ export const Header: React.FC<HeaderProps> = props => {
       </div>
     </nav>
   )
+}
+
+/**
+ * Determines if the header should animate based on if the user came from within the site
+ */
+const shouldAnimateHeader = (): boolean => {
+  const params = new URLSearchParams(window.location.search)
 }
