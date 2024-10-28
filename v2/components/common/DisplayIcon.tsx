@@ -6,6 +6,6 @@ interface DisplayIconProps {
 
 export const DisplayIcon: React.FC<DisplayIconProps> = props => {
   return (
-    <img src={props.src} className='w-96' />
+    <img src={props.src} className='w-44' />
   )
 }

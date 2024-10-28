@@ -1,0 +1,25 @@
+[{
+  "icon": "./ucb.svg",
+  "title": "UC Berkeley",
+  "titleLink": "https://ischoolonline.berkeley.edu/data-science",
+  "subtitles": [["May 2023 - December 2024"], ["Berkeley, CA", "GPA 3.925"]],
+  "description": "I completed my Masters of Information and Data Science having taken 9 courses totaling 27 units. The classes focused on data science, machine learning, and statistics. My capstone project was a research paper on the use of Multi Agent Reinforcement Learning to automate windfall apple harvesting."
+}, {
+  "icon": "./bern.svg",
+  "title": "University of Bern",
+  "titleLink": "https://unibe.ch/index_eng.html",
+  "subtitles": [["August 2021 - December 2021"], ["Bern, Switzerland"]],
+  "description": "I attended a six month graduate program in Artificial Intelligence having taken 3 courses. The classes where on Natural Language Processing with transformers, Optimization Algorithms other than Gradient Descent, and Human-Computer Interaction."
+}, {
+  "icon": "./stevens.svg",
+  "title": "Stevens Institute of Technology",
+  "titleLink": "https://stevens.edu",
+  "subtitles": [["August 2019 - May 2021"], ["Hoboken, NJ", "GPA 3.855"]],
+  "description": "I completed my Bachelor of Science in Computer Science and Minor in Pure and Applied Mathematics having taken 27 courses totaling 76 units. I transferred into Stevens in my Junior year after spending 2 years at Santa Rosa Junior College. I was the vice president of the Stevens Computer Science Club and a teaching assistant for Introduction to Quantum Computing and Data Structures."
+}, {
+  "icon": "./ciee.svg",
+  "title": "CIEE",
+  "titleLink": "https://ciee.org/",
+  "subtitles": [["December 2019 - January 2020"], ["Kyoto, Japan", "GPA 4.0"]],
+  "description": "I enrolled in a study abroad program studying Japanese Art History. They were taught in English, but I became fascinated with the Japanese language and culture. I spent my free time learning Japanese and exploring the city, and have continued studying Japanese for the last several years."
+}]

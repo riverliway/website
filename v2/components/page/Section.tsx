@@ -16,14 +16,12 @@ export const Section: React.FC<SectionProps> = props => {
   const [isTitleHover, setIsTitleHover] = useState(false)
 
   return (
-    <motion.div
-      className='flex gap-8'
-    >
+    <motion.div className='flex gap-8'>
       <a
         href={props.titleLink}
         target='_blank'
         rel='noreferrer nofollow'
-        className='w-96'
+        className='w-16 shrink-0 text-purple-400'
         onMouseEnter={() => setIsIconHover(true)}
         onMouseLeave={() => setIsIconHover(false)}
       >
@@ -49,7 +47,7 @@ export const Section: React.FC<SectionProps> = props => {
                   <React.Fragment key={i}>
                     <div>&middot;</div>
                     <div>{subtitle}</div>
-                    </React.Fragment>
+                  </React.Fragment>
                 )
               }
 
