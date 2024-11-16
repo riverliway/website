@@ -2,15 +2,22 @@ import React from 'react'
 import { SVGMotionProps, motion } from 'framer-motion'
 
 interface DrawnIconProps {
+  width: number
+  height: number
+  viewWidth: number
+  viewHeight: number
   d: string
   delay: number
   animate?: boolean
+  fill?: boolean
+  fillRule?: 'evenodd'
 }
 
 /**
  * An animated icon
  */
 export const DrawnIcon: React.FC<DrawnIconProps> = props => {
+  const fill = props.fill ?? true
   const animate = props.animate ?? true
   const pathProps: SVGMotionProps<SVGPathElement> = {
     strokeLinecap: 'square',
@@ -30,12 +37,13 @@ export const DrawnIcon: React.FC<DrawnIconProps> = props => {
     >
       <motion.svg
         xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 24 24'
-        width='35'
-        height='35'
-        className='fill-fuchsia-800 hover:fill-fuchsia-950'
+        viewBox={`0 0 ${props.viewWidth} ${props.viewHeight}`}
+        width={props.width}
+        height={props.height}
+        fillRule={props.fillRule}
+        className={`fill-fuchsia-800 hover:fill-fuchsia-950 ${!props.height && !props.width ? 'w-full' : ''}`}
         initial={{ fillOpacity: 0 }}
-        animate={{ fillOpacity: 1 }}
+        animate={{ fillOpacity: fill ? 1 : 0 }}
         transition={{
           duration: animate ? 1 : 0,
           ease: 'linear',

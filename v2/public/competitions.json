@@ -1,0 +1,43 @@
+[{
+  "type": "entry",
+  "icon": "emf",
+  "title": "Tildagon App Showcase",
+  "titleLink": "https://github.com/emfcamp/badge-2024-software",
+  "subtitles": [["June 2024", "Electromagnetic Field"], ["C"]],
+  "description": "The badges at EMF are programmable, and I created a small app to let you play simon says on the badge."
+}, {
+  "type": "entry",
+  "icon": "stanford",
+  "title": "TreeHacks",
+  "titleLink": "https://github.com/riverliway/spylingo",
+  "subtitles": [["February 2024", "Stanford University"], ["Typescript", "React", "LLM", "Image Generation", "ElevenLabs"]],
+  "description": "The SpyLingo project lets you practice a foreign language by trying to extract target information from them."
+}, {
+  "type": "entry",
+  "icon": "ucb",
+  "title": "Hack for Impact",
+  "titleLink": "https://github.com/riverliway/meow",
+  "subtitles": [["February 2024", "UC Berkeley"], ["Python", "Embeddings", "BERT", "NLP"]],
+  "description": "This charity project was a financial classification model which took in data about a user's expenses and created tags to help classify them."
+}, {
+  "type": "entry",
+  "icon": "defcon",
+  "title": "AI Capture the Flag",
+  "titleLink": "https://www.kaggle.com/competitions/ai-village-capture-the-flag-defcon31/overview",
+  "subtitles": [["October 2023", "DEFCON 31"], ["Python"]],
+  "description": "AI Capture the Flag is a competiton to complete various challenges in the field of data science and machine learning. I only managed to complete 8 of the 27 flags, but it was still a fun experience."
+}, {
+  "type": "entry",
+  "icon": "stevens",
+  "title": "StevensHacks",
+  "titleLink": "https://github.com/zackatoo/StevensSmash",
+  "subtitles": [["March 2020", "Stevens Institute of Technology"], ["Gamemaker Studio"]],
+  "description": "A simple platform fighter inspired by Smash Bros. that includes 4 fighters, including the school mascot."
+}, {
+  "type": "entry",
+  "icon": "mad",
+  "title": "MadHacks",
+  "titleLink": "https://github.com/zackatoo/lipsink",
+  "subtitles": [["November 2018", "University of Wisconsin, Madison"], ["Java, OpenCV", "Haar Cascade Classifier"]],
+  "description": "This application tracks the face of the user through their webcam in real time, then uses the position of the mouth to animate a cartoon mouth. The idea was to help animators create more realistic lip syncing animations."
+}]

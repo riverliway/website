@@ -1,0 +1,22 @@
+[{
+  "type": "entry",
+  "icon": "stevens",
+  "title": "QILCOM Finalist",
+  "titleLink": "https://riverway.li/qilcom/Qilcom_Model.pdf",
+  "subtitles": [["April 2020"]],
+  "description": "QILCOM is the Quantum Ideas Lab Competition hosted by Stevens Institute of Technology. It is a research competition where teams of undergraduates are paired up with a PhD student to perform experiments and conduct research in the field of quantum computing.\n\nMy team attempted to find a state estimation algorithm which could approximate the resulting state of certain types of quantum circuits more efficiently. Simulating general quantum circuits is extremely expensive in time and space complexity, so our algorithm could dramatically reduce that time for specific types of quantum circuits by sacrificing a bit of accuracy. Although it fails to efficiently simulate circuits like Grover's search or Shor's factoring algorithm, it can offer improvement against Google's Random Circuit Sampling problem."
+}, {
+  "type": "entry",
+  "icon": "eagle",
+  "title": "Eagle Scout",
+  "titleLink": "https://en.wikipedia.org/wiki/Eagle_Scout",
+  "subtitles": [["June 2017"]],
+  "description": "I started in Cub Scouts when I was 7 years old and stayed in Scouts through my entire pre-adult life. I achieved the rank of Eagle scout after completing a new exhibit for my hometown museum detailing the history of the museum's building."
+}, {
+  "type": "entry",
+  "icon": "tech_high",
+  "title": "Varsity Tennis MVP",
+  "titleLink": "https://ths.crpusd.org",
+  "subtitles": [["May 2017"]],
+  "description": "I played tennis at my high school in California for 3 years, eventually being awarded MVP of our varsity team."
+}]

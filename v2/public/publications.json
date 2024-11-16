@@ -1,0 +1,31 @@
+[{
+  "type": "title",
+  "title": "Textbooks"
+}, {
+  "type": "entry",
+  "icon": "qc",
+  "title": "Quantum Computing Survival Guide",
+  "titleLink": "https://riverway.li/qcsg",
+  "subtitles": [["2020"]],
+  "description": "The quantum computing survival guide is a freely available, interactive online textbook which serves an introduction to quantum computing. I found a lot of available resources for quantum computing are either too simple or too complex. Many articles written for the general public explain qubits and superposition, but fail to explain how those concepts extend to useful computation for solving actual problems. Papers in academic journals assume the reader is already an expert in quantum computation and use advanced ideas without explaining them. I felt there weren&apos;t enough resources that bridged that gap for intermediate level readers. The QCSG is still a work in development, but the first several chapters provide a fresh perspective on quantum computing by leveraging interactive applets and 3D graphics.\n\nThe textbook was written in Typora using LaTeX and the interactive applets were made with the p5.js library."
+}, {
+  "type": "title",
+  "title": "Conferences"
+}, {
+  "type": "entry",
+  "icon": "tprc",
+  "title": "Measuring the Success of the Affordable Connectivity Program",
+  "titleLink": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4528690",
+  "subtitles": [["2023"]],
+  "description": "I presented my findings in this paper on measuring the impact of the the Affordable Connectivity Program on consumer internet service plan pricing during the TPRC 51 conference."
+}, {
+  "type": "title",
+  "title": "Corrections"
+}, {
+  "type": "entry",
+  "icon": "chess",
+  "title": "A position in infinite chess with game value ω⁴",
+  "titleLink": "https://github.com/riverliway/infinite-chess/blob/main/correction/Explanation%20of%20mistake%20in%20omega%5E4%20Game%20Value%20Paper.pdf",
+  "subtitles": [["2023"]],
+  "description": "A short proof showing how a slight mistake one of the figures in [the paper](https://arxiv.org/abs/1510.08155) by C. D. A. Evans, Joel David Hamkins and Norman Lewis Perlmutter alters the result of the paper and how to correct it."
+}]

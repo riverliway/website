@@ -1,6 +1,8 @@
 import React, { ReactNode, useState } from 'react'
-import { useMediaQuery } from '@mui/material'
+import { chunk } from 'lodash'
 import { FanceUnderline } from '../signature/FancyUnderline'
+import { useMediaQuery } from 'react-responsive'
+import { useTheme } from './Page'
 
 interface BodyProps {
   children: ReactNode
@@ -11,17 +13,33 @@ interface BodyProps {
  * @prop children - The content of the body.
  */
 export const Body: React.FC<BodyProps> = props => {
-  const isPhone = useMediaQuery('(max-width: 530px)')
+  const theme = useTheme()
+  const isPhone = useMediaQuery({ maxWidth: 530 })
+  const isTablet = useMediaQuery({ maxWidth: 900 })
+
+  const tabSize = isPhone ? 1 : (isTablet ? 4 : 8)
+
+  const tabs = chunk([
+    { href: '/?self=1', text: 'Projects' },
+    { href: '/publications?self=1', text: 'Publications' },
+    { href: '/packages?self=1', text: 'Packages' },
+    { href: '/experience?self=1', text: 'Experience' },
+    { href: '/education?self=1', text: 'Education' },
+    { href: '/awards?self=1', text: 'Awards' },
+    { href: '/competitions?self=1', text: 'Competitions' }
+  ], tabSize)
 
   return (
-    <div className='pt-20 pb-96 w-full text-purple-200'>
-      <div className='flex flex-col items-center max-w-screen-lg m-auto px-8 gap-24'>
-        <div className={`w-9/12 flex ${isPhone ? 'flex-col gap-8 text-center' : 'flex-row justify-around'} items-center text-xl`}>
-          <Nava href='/?self=1'>Projects</Nava>
-          <Nava href='/publications?self=1'>Publications</Nava>
-          <Nava href='/packages?self=1'>Packages</Nava>
-          <Nava href='/experience?self=1'>Experience</Nava>
-          <Nava href='/education?self=1'>Education</Nava>
+    <div className={`pt-20 pb-96 w-full ${theme === 'dark' ? 'text-purple-200' : 'text-purple-800'}`}>
+      <div className={`flex flex-col items-center max-w-screen-lg m-auto ${isPhone ? 'px-2' : 'px-8'} gap-24`}>
+        <div className='w-11/12 flex flex-col gap-1 text-center items-center text-xl'>
+          {tabs.map((tabRow, i) => (
+            <div key={i} className='w-full flex flex-row justify-around'>
+              {tabRow.map((tab, j) => (
+                <Nava key={j} href={tab.href}>{tab.text}</Nava>
+              ))}
+            </div>
+          ))}
         </div>
         {props.children}
       </div>
@@ -35,10 +53,15 @@ interface NavaProps {
 }
 
 const Nava: React.FC<NavaProps> = props => {
+  const theme = useTheme()
   const alreadyAt = window.location.pathname === props.href.split('?')[0]
   const [isHover, setIsHover] = useState(alreadyAt)
 
-  const className = `w-fit flex flex-col items-center ${alreadyAt ? 'text-purple-400' : 'text-purple-200'}`
+  const textColor = theme === 'dark'
+    ? (alreadyAt ? 'text-purple-400' : 'text-purple-200')
+    : (alreadyAt ? 'text-purple-400' : 'text-purple-800')
+
+  const className = `w-fit flex flex-col items-center ${textColor}`
 
   if (alreadyAt) {
     return (

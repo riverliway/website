@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
+import { convertHtmlToReact } from '@hedgedoc/html-to-react'
+import DOMPurify from 'dompurify'
+import { marked } from 'marked'
 import './globals.css'
 
 import { Page } from './components/page/Page'
 import { Sections } from './components/page/Sections'
 import { Section } from './components/page/Section'
-import { DisplayIcon } from './components/common/DisplayIcon'
-import { convertHtmlToReact } from '@hedgedoc/html-to-react'
-import DOMPurify from 'dompurify'
-import { marked } from 'marked'
+import { formatRemoteUrl } from './components/common/formatRemoteUrl'
 
 interface Section {
+  type: 'entry' | 'title'
   icon: string
   title: string
   titleLink: string
@@ -24,12 +25,13 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchContent = async () => {
       const sectionName = getSection(window.location.pathname)
-      const url = window.location.host.includes('localhost') ? `http://${window.location.host}/${sectionName}.json` : 'https://'
+      const url = formatRemoteUrl(`${sectionName}.json`)
 
       const response = await fetch(url)
 
       if (!response.ok) {
         console.error('Failed to fetch content')
+        console.error(response.statusText)
         return
       }
 
@@ -43,18 +45,15 @@ const App: React.FC = () => {
 
     void fetchContent()
   }, [])
-  
-  if (sections === undefined) {
-    return <div>Loading...</div>
-  }
 
   return (
     <Page>
       <Sections>
-        {sections.map((section, i) => (
+        {sections === undefined ? <div>Loading...</div> : sections.map((section, i) => (
           <Section
             key={i}
-            icon={<DisplayIcon src={section.icon} />}
+            type={section.type}
+            icon={section.icon}
             title={section.title}
             titleLink={section.titleLink}
             subtitles={section.subtitles}
@@ -72,6 +71,7 @@ const RenderTextBlock: React.FC<{ body: string }> = ({ body }) => {
 
   useEffect(() => {
     const parse = async () => {
+      if (!body) return
       const mbody = await marked.parse(body, { async: true })
       // Sanitize raw HTML to prevent malicious injections
       setParsedBody(DOMPurify.sanitize(mbody))
@@ -87,10 +87,10 @@ const RenderTextBlock: React.FC<{ body: string }> = ({ body }) => {
   )
 }
 
-type SectionType = 'experience' | 'education' | 'publications' | 'packages' | 'projects'
+type SectionType = 'experience' | 'education' | 'publications' | 'packages' | 'projects' | 'awards' | 'competitions'
 
 const getSection = (pathname: string): SectionType => {
-  const sections: SectionType[] = ['experience', 'education', 'publications', 'packages', 'projects']
+  const sections: SectionType[] = ['experience', 'education', 'publications', 'packages', 'projects', 'awards', 'competitions']
   for (const section of sections) {
     if (pathname.includes(section)) {
       return section

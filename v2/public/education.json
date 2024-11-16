@@ -1,25 +1,57 @@
 [{
-  "icon": "./ucb.svg",
+  "type": "entry",
+  "icon": "ucb",
   "title": "UC Berkeley",
   "titleLink": "https://ischoolonline.berkeley.edu/data-science",
   "subtitles": [["May 2023 - December 2024"], ["Berkeley, CA", "GPA 3.925"]],
   "description": "I completed my Masters of Information and Data Science having taken 9 courses totaling 27 units. The classes focused on data science, machine learning, and statistics. My capstone project was a research paper on the use of Multi Agent Reinforcement Learning to automate windfall apple harvesting."
 }, {
-  "icon": "./bern.svg",
+  "type": "entry",
+  "icon": "bern",
   "title": "University of Bern",
   "titleLink": "https://unibe.ch/index_eng.html",
   "subtitles": [["August 2021 - December 2021"], ["Bern, Switzerland"]],
-  "description": "I attended a six month graduate program in Artificial Intelligence having taken 3 courses. The classes where on Natural Language Processing with transformers, Optimization Algorithms other than Gradient Descent, and Human-Computer Interaction."
+  "description": "I attended a six month graduate program in Artificial Intelligence having taken 3 courses. The classes were on Natural Language Processing with transformers, Optimization Algorithms other than Gradient Descent, and Deep Convolutional Neural Networks."
 }, {
-  "icon": "./stevens.svg",
+  "type": "entry",
+  "icon": "stevens",
   "title": "Stevens Institute of Technology",
   "titleLink": "https://stevens.edu",
   "subtitles": [["August 2019 - May 2021"], ["Hoboken, NJ", "GPA 3.855"]],
   "description": "I completed my Bachelor of Science in Computer Science and Minor in Pure and Applied Mathematics having taken 27 courses totaling 76 units. I transferred into Stevens in my Junior year after spending 2 years at Santa Rosa Junior College. I was the vice president of the Stevens Computer Science Club and a teaching assistant for Introduction to Quantum Computing and Data Structures."
 }, {
-  "icon": "./ciee.svg",
+  "type": "entry",
+  "icon": "ciee",
   "title": "CIEE",
   "titleLink": "https://ciee.org/",
   "subtitles": [["December 2019 - January 2020"], ["Kyoto, Japan", "GPA 4.0"]],
   "description": "I enrolled in a study abroad program studying Japanese Art History. They were taught in English, but I became fascinated with the Japanese language and culture. I spent my free time learning Japanese and exploring the city, and have continued studying Japanese for the last several years."
+}, {
+  "type": "entry",
+  "icon": "stanford",
+  "title": "Stanford University",
+  "titleLink": "https://stanford.edu",
+  "subtitles": [["June 2018 - August 2018"], ["Palo Alto, CA", "GPA 3.746"]],
+  "description": "I attended a summer program for an intensive in Computer Science. I took 3 courses in Systems Engineering, Frontend Web Development, and Data Science. I also participated in the Silicon Valley Innovation Academy that taught all of the necessary skills to run a startup."
+}, {
+  "type": "entry",
+  "icon": "srjc",
+  "title": "Santa Rosa Junior College",
+  "titleLink": "https://santarosa.edu",
+  "subtitles": [["August 2017 - May 2019"], ["Santa Rosa, CA", "GPA 3.857"]],
+  "description": "I completed my Associates of Science in Computer Science having taken 19 courses totaling 66 units. I was a teaching assistant for Data Structures and Algorithms."
+}, {
+  "type": "entry",
+  "icon": "tyk",
+  "title": "Tampereen Yhteiskoulun Lukio",
+  "titleLink": "https://tyk.info/en/",
+  "subtitles": [["August 2015 - May 2016"], ["Tampere, Finland"]],
+  "description": "I spent a year abroad in Finland studying at a Finnish high school. I took courses in Finnish, Mathematics, Physics, Chemistry, and History."
+}, {
+  "type": "entry",
+  "icon": "tech_high",
+  "title": "Technology High School",
+  "titleLink": "https://ths.crpusd.org/",
+  "subtitles": [["August 2013 - May 2017"], ["Cotati, California", "GPA 4.5"]],
+  "description": "I attended a small high school that had a strong focus on STEM. I took many AP courses and was the MVP of our varsity tennis team."
 }]

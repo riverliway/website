@@ -1,29 +1,34 @@
 [{
-  "icon": "./ready.svg",
+  "type": "entry",
+  "icon": "ready",
   "title": "Senior Data Engineer",
   "titleLink": "https://ready.net",
   "subtitles": [["March 2022 - Present"], ["Ready.net", "Remote"]],
   "description": "Ready.net is a startup focused on designing tools for data analysis and federal grant applications aimed at Internet Service Providers.\n\nI started working at Ready.net in March 2022 as a Frontend Engineer when we only had 20 employees. At a small startup, I was able to wear many hats and work on a variety of projects. I expanded to full stack engineering, moved to a Technical Lead role as manager of a small team, and eventually transitioned to a Senior Data Engineer role.\n\nMy responsibilities include developing and maintaining our data pipelines, creating and maintaining data models, and developing and maintaining data visualizations. I primarily work with Python, SQL, and Airflow."
 }, {
-  "icon": "./zyphra.svg",
+  "type": "entry",
+  "icon": "zyphra",
   "title": "Machine Learning Contractor",
   "titleLink": "https://zyphra.com",
   "subtitles": [["October 2022 - March 2023"], ["Zyphra", "Remote"]],
   "description": "Zyphra is a startup focused on designing specialized hardware for efficient backpropagation.\n\nThis was a part time contracting role to help out on a specific project during the company's seed funding.\n\nI read several research papers and worked with a postdoc researcher to analyze Predictive Coding Networks. I was responsible for explaining the theory of these networks via animation using the Manim python library."
 }, {
-  "icon": "./3b1b_color.svg",
+  "type": "entry",
+  "icon": "3b1b_color.svg",
   "title": "Mathematics Web Development Intern",
   "titleLink": "https://3blue1brown.com",
   "subtitles": [["June 2021 - August 2021"], ["3Blue1Brown", "Remote"]],
   "description": "3Blue1Brown by Grant Sanderson is a YouTube channel that produces educational videos on mathematics.\n\nI was part of an intern team responsible for producing articles, designing informative graphics, creating interactive web applets, and general upkeep of the website. Articles were generally about linear algebra, fourier transforms, prime numbers, etc."
 }, {
-  "icon": "./stevens.svg",
+  "type": "entry",
+  "icon": "stevens",
   "title": "Quantum Computing Teaching Assistant",
   "titleLink": "https://stevens.edu",
   "subtitles": [["January 2021 - May 2021"], ["Stevens Institute of Technology", "Hoboken, NJ"]],
   "description": "Lead teaching assistant for Introduction to Quantum Computing. Responsible for grading assignments and hosting office hours to help students understand the material. Taught linear algebra, spherical coordinates, and Python refreshers to the class."
 }, {
-  "icon": "./srjc.svg",
+  "type": "entry",
+  "icon": "srjc",
   "title": "Data Structures Teaching Assistant",
   "titleLink": "https://santarosa.edu",
   "subtitles": [["August 2018 - May 2019"], ["Santa Rosa Junior College", "Santa Rosa, CA"]],

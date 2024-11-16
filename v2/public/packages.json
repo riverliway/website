@@ -1,0 +1,36 @@
+[{
+  "type": "entry",
+  "icon": "npm",
+  "title": "Inkbrush",
+  "titleLink": "https://github.com/riverliway/inkbrush",
+  "subtitles": [["Typescript"]],
+  "description": "This is a library to generate SVGs that look like they were drawn with a brush. I've used them to animate drawings in frontend environments."
+}, {
+  "type": "entry",
+  "icon": "npm",
+  "title": "Together-ai Typescript SDK",
+  "titleLink": "https://github.com/riverliway/together-ai",
+  "subtitles": [["Typescript"]],
+  "description": "A custom built SDK for the Together-ai API. It is used to handle streaming real time LLM generation from their API."
+}, {
+  "type": "entry",
+  "icon": "npm",
+  "title": "Browser Encryption",
+  "titleLink": "https://github.com/riverliway/browser-encryption",
+  "subtitles": [["Typescript"]],
+  "description": "A simple library for encrypting and decrypting data in the browser. It uses the Web Crypto API to handle the encryption and decryption. It is useful for encrypting data at transpilation time and decrypting it at runtime.\n\nI do not recommend this over server side encryption, but it is useful for some low-stakes use cases."
+}, {
+  "type": "entry",
+  "icon": "npm",
+  "title": "Octogration",
+  "titleLink": "https://github.com/ready/octogration",
+  "subtitles": [["Typescript"]],
+  "description": "A dev tool library for integrating with GitHub to create automatic changelogs, commit summaries, and readme badges."
+}, {
+  "type": "entry",
+  "icon": "npm",
+  "title": "Koilang",
+  "titleLink": "https://github.com/riverliway/koilang",
+  "subtitles": [["Typescript"]],
+  "description": "A library containing paring and conversion tools for the Tsehvu constructed language (Koilang)."
+}]

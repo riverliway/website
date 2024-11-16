@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { createDurationDelays } from './createDurationDelays'
+import { useTheme } from '../page/Page'
 
 interface SignatureProps {
   shouldInitialAnimate?: boolean
 }
 
 export const Signature: React.FC<SignatureProps> = props => {
+  const theme = useTheme()
   const animate = props.shouldInitialAnimate ?? true
   const [canShow, setCanShow] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
@@ -48,7 +50,7 @@ export const Signature: React.FC<SignatureProps> = props => {
               delay: animate ? durationDelays[i].delay : 0
             }}
             strokeLinecap='round'
-            stroke='#8a0699'
+            stroke={theme === 'dark' ? '#8a0699' : '#9f74cf'}
           />
           {canShow && (
             <motion.path
@@ -75,7 +77,7 @@ export const Signature: React.FC<SignatureProps> = props => {
               }}
               d={d}
               strokeLinecap='round'
-              stroke='#e9d5ff'
+              stroke={theme === 'dark' ? '#e9d5ff' : '#61036b'}
             />
           )}
         </React.Fragment>

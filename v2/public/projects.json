@@ -1,0 +1,50 @@
+[{
+  "type": "entry",
+  "icon": "stocks",
+  "title": "Integra",
+  "titleLink": "",
+  "subtitles": [["December 2020 - November 2021"], ["Python", "Tensorflow", "Typescript", "React"]],
+  "description": "Many machine learning engineers have considered training their own artificial intelligence to trade assets in a financial market. Integra is my attempt at time series analysis for trading cryptocurrency. I tried training both an LSTM and CNN for Integra, but they both performed very poorly. I found that training a model on selected indicators instead of price data directly improved the performance considerably. In the future I'd like to experiment to see if sentiment analysis on live social media feed could improve the model even more for long term trends. \n\n BinancePythonAPI was used to connect to the crypto exchange. Tensorflow was used for training and evaluating the models. I also created a frontend to display the candlestick graphs using Typescript and React."
+}, {
+  "type": "entry",
+  "icon": "paint",
+  "title": "pAInter",
+  "titleLink": "https://www.youtube.com/watch?v=zJBpPzhgKyw",
+  "subtitles": [["June 2020 - September 2020"], ["Python", "Tensorflow", "Ebsynth", "OpenCV"]],
+  "description": "I find style transfer networks to be a fascinating field in machine learning. The goal of a style transfer network is to learn an artist's style from a single image and then &quot;paint&quot; over other images in that style. However, painting over video is more tricky because the small changes from one frame to the next can drastically change the output brush strokes. This produces a video with lots of flickering, and we&apos;d like a smooth video. We can use an optical flow library which takes a key frame and morphs it to match the nearby frames of a video. Combined with pre and postprocessing techniques to improve the quality of the output, this model produces beautiful painted videos which can be viewed on my [YouTube channel](https://www.youtube.com/channel/UCSrJD5Ic4ClxCpg68tVfvOg).\n\nThe style transfer network uses the Tensorflow library. Optical flow was done with EbSynth. OpenCV was used for pre and postprocessing."
+}, {
+  "type": "entry",
+  "icon": "edubots",
+  "title": "Edubots",
+  "titleLink": "",
+  "subtitles": [["August 2016 - March 2017"], ["GameMaker Studio 2"]],
+  "description": "My senior project in high school was to create a video game that taught history as you played through it."
+}, {
+  "type": "entry",
+  "icon": "sudoku",
+  "title": "Sudoku Solver",
+  "titleLink": "",
+  "subtitles": [["January 2017 - March 2017"], ["Javascript"]],
+  "description": "The first project I did that could be executed from the command line. It took in the numbers of a sudoku puzzle and outputted the solved puzzle. It was written in Javascript."
+}, {
+  "type": "entry",
+  "icon": "minecraft",
+  "title": "Minecraft Plugins",
+  "titleLink": "",
+  "subtitles": [["February 2015 - June 2017"], ["Java"]],
+  "description": "I used to be an administrator for a very large minecraft server (10k+ players) and help develop minecraft plugins."
+}, {
+  "type": "entry",
+  "icon": "html",
+  "title": "Pokemon Comic Website",
+  "titleLink": "",
+  "subtitles": [["July 2012"], ["HTML", "CSS"]],
+  "description": "My very first attempt at making a website, it was built in HTML and CSS and was a comic about Pokemon. It was a simple website with a few pages and a comic on each page."
+}, {
+  "type": "entry",
+  "icon": "scribble",
+  "title": "Scribble",
+  "titleLink": "",
+  "subtitles": [["July 2011 - July 2013"], ["GameMaker Studio 1"]],
+  "description": "My very first attempt at making a video game. It was a top down puzzle game where you had to navigate a maze to reach the end. The game was made in GameMaker Studio and I made 2 sequels. It is called Scribble because I had no art skills and it was all drawn in paint."
+}]
