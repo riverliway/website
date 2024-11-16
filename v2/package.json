@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "prod": "vite build"
+    "prod": "vite build && cp dist/assets/$(ls dist/assets | grep -E '\\.js' | head -n 1) compiled/main.js && cp dist/assets/$(ls dist/assets | grep -E '\\.css' | head -n 1) compiled/main.css"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

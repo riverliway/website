@@ -49,7 +49,7 @@ const App: React.FC = () => {
   return (
     <Page>
       <Sections>
-        {sections === undefined ? <div>Loading...</div> : sections.map((section, i) => (
+        {sections === undefined ? <div /> : sections.map((section, i) => (
           <Section
             key={i}
             type={section.type}

@@ -54,7 +54,7 @@ interface NavaProps {
 
 const Nava: React.FC<NavaProps> = props => {
   const theme = useTheme()
-  const alreadyAt = window.location.pathname.includes(props.href.split('?')[0])
+  const alreadyAt = window.location.pathname.replaceAll('/', '').trim() === props.href.split('?')[0].replaceAll('/', '').trim()
   const [isHover, setIsHover] = useState(alreadyAt)
 
   const textColor = theme === 'dark'
