@@ -85,7 +85,7 @@ export const Section: React.FC<SectionProps> = props => {
         )}
         {type === 'title' && <div className='text-4xl'>{props.title}</div>}
         {props.subtitles?.map((subtitleRow, j) => (
-          <div key={j} className={`flex flex-wrap justify-center gap-x-2 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>
+          <div key={j} className={`flex flex-wrap max-[530px]:justify-center gap-x-2 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>
             {subtitleRow.map((subtitle, i) => {
               if (i !== 0) {
                 return (

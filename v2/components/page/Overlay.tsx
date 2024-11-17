@@ -1,6 +1,6 @@
 import React from 'react'
-import { useTheme } from './Page'
 import { useMediaQuery } from 'react-responsive'
+import { useTheme } from './Page'
 
 export const Overlay: React.FC = () => {
   const theme = useTheme()

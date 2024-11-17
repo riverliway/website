@@ -30,7 +30,7 @@ export const Body: React.FC<BodyProps> = props => {
   ], tabSize)
 
   return (
-    <div className={`pt-20 pb-96 w-full ${theme === 'dark' ? 'text-purple-200' : 'text-purple-800'}`}>
+    <div className={`pt-20 pb-96 max-[530px]:pb-20 w-full ${theme === 'dark' ? 'text-purple-200' : 'text-purple-800'}`}>
       <div className={`flex flex-col items-center max-w-screen-lg m-auto ${isPhone ? 'px-2' : 'px-8'} gap-24`}>
         <div className='w-11/12 flex flex-col gap-1 text-center items-center text-xl'>
           {tabs.map((tabRow, i) => (
