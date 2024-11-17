@@ -14,8 +14,8 @@ interface BodyProps {
  */
 export const Body: React.FC<BodyProps> = props => {
   const theme = useTheme()
-  const isPhone = useMediaQuery({ maxWidth: 530 })
-  const isTablet = useMediaQuery({ maxWidth: 900 })
+  const isPhone = useMediaQuery({ screen: true, maxWidth: 530 })
+  const isTablet = useMediaQuery({ screen: true, maxWidth: 900 })
 
   const tabSize = isPhone ? 1 : (isTablet ? 4 : 8)
 

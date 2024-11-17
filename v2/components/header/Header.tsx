@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useMediaQuery } from '@mui/material'
 
 import { ThemeSwitch } from './ThemeSwitch'
 import { ButtonIcon } from '../common/ButtonIcon'
 import { Signature } from '../signature/Signature'
 import { DrawnIcon } from '../drawnIcons/DrawnIcon'
+import { useMediaQuery } from 'react-responsive'
 
 interface HeaderProps {
   theme: 'dark' | 'light'
@@ -14,7 +14,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = props => {
   const [shouldAnimate, _set] = useState(shouldAnimateHeader())
-  const isSmallPhone = useMediaQuery('(max-width: 320px)')
+  const isSmallPhone = useMediaQuery({ screen: true, maxWidth: 320 })
 
   return (
     <nav

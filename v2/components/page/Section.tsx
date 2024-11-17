@@ -16,7 +16,7 @@ interface SectionProps {
 
 export const Section: React.FC<SectionProps> = props => {
   const theme = useTheme()
-  const isPhone = useMediaQuery({ maxWidth: 530 })
+  const isPhone = useMediaQuery({ screen: true, maxWidth: 530 })
   const type = props.type ?? 'entry'
   const [isIconHover, setIsIconHover] = useState(false)
   const [isTitleHover, setIsTitleHover] = useState(false)
