@@ -21,6 +21,13 @@
   "description": "My capstone project for my undergraduate degree was a 2D platforming game where the player could input combinations of buttons to form notes on the lute to produce different elemental effects on the environment."
 }, {
   "type": "entry",
+  "icon": "books",
+  "title": "Personal Library",
+  "titleLink": "https://riverway.li/books",
+  "subtitles": [["July 2020 - August 2020"], ["HTML", "Javascript"]],
+  "description": "One of my hobbies is reading, I am a huge biblophile and own over a thousand books. After keeping track of all of the statistics about my books in an excel spreadsheet, I decided to make a website to display all of the information. The website is built in HTML and Javascript and is hosted on my personal website. It displays all of the books I own, the authors, the genres, the number of pages, the publication date, and if I finished reading the book."
+}, {
+  "type": "entry",
   "icon": "paint",
   "title": "pAInter",
   "titleLink": "https://www.youtube.com/watch?v=zJBpPzhgKyw",
