@@ -7,6 +7,13 @@
   "description": "My capstone project for my masters degree is a multi-agent reinforcement learning environment for picking up windfallen apples. The environment is a 2D aerial view of an apple orchard with many trees and apples. The agents are robots driving on the ground and can pick up apples. The agents are trained using a multi-agent reinforcement learning algorithm called Mava. The environment is built using Jumanji, a library for creating multi-agent reinforcement learning environments. The agents are trained using JAX, a library for high-performance numerical computing. The project is hosted on a website where you can watch the agents learn to pick up apples in real-time."
 }, {
   "type": "entry",
+  "icon": "naruto",
+  "title": "Comic Reader",
+  "titleLink": "",
+  "subtitles": [["January 2024 - August 2024"], ["React", "Tailwind"]],
+  "description": "I built a frontend to read comics that the user has the image files for. It hooks up to a database and displays the images in a comic book format. The user can navigate through the pages using the arrow keys or the mouse. The user can also zoom in and out of the pages. It will keep track of which chapters have been read and the ratings of each series."
+}, {
+  "type": "entry",
   "icon": "stocks",
   "title": "Integra",
   "titleLink": "",
