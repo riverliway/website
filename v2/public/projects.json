@@ -21,6 +21,13 @@
   "description": "One of my earlier personal projects in university was to take in a MIDI file of a song played on the piano and animate it on a keyboard made of hexagons layed out in a [harmonic note pattern](https://en.wikipedia.org/wiki/Harmonic_table_note_layout) which has keys laid out according to their harmonic relationship instead of frequency."
 }, {
   "type": "entry",
+  "icon": "java",
+  "title": "MyJava",
+  "titleLink": "",
+  "subtitles": [["April 2018 - May 2018"], ["Java"]],
+  "description": "My final project in my introduction to Java class was to build an interpreter for a custom programming language. It had a simple syntax and could define variables of the basic primative types, supported basic operators and had conditionals."
+}, {
+  "type": "entry",
   "icon": "edubots",
   "title": "Edubots",
   "titleLink": "",
