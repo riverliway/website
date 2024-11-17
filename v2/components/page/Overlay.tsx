@@ -1,8 +1,14 @@
 import React from 'react'
 import { useTheme } from './Page'
+import { useMediaQuery } from 'react-responsive'
 
 export const Overlay: React.FC = () => {
   const theme = useTheme()
+  const isPhone = useMediaQuery({ screen: true, maxWidth: 530 })
+
+  if (isPhone) {
+    return <></>
+  }
 
   if (theme === 'light') {
     return (

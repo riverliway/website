@@ -79,13 +79,13 @@ export const Section: React.FC<SectionProps> = props => {
         {type === 'entry' && (
           <TitleLink className={`${isPhone ? 'text-2xl' : 'text-3xl'} flex items-center gap-2`} setHover={setIsTitleHover}>
             {isPhone && <div style={{ width: 50 }} />}
-            <div>{props.title}</div>
+            <div className={isPhone ? 'text-center': ''}>{props.title}</div>
             <NewTabIcon isHover={isIconHover || isTitleHover} />
           </TitleLink>
         )}
         {type === 'title' && <div className='text-4xl'>{props.title}</div>}
         {props.subtitles?.map((subtitleRow, j) => (
-          <div key={j} className={`flex gap-2 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>
+          <div key={j} className={`flex flex-wrap justify-center gap-x-2 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>
             {subtitleRow.map((subtitle, i) => {
               if (i !== 0) {
                 return (
