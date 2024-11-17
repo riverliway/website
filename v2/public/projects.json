@@ -14,6 +14,13 @@
   "description": "Many machine learning engineers have considered training their own artificial intelligence to trade assets in a financial market. Integra is my attempt at time series analysis for trading cryptocurrency. I tried training both an LSTM and CNN for Integra, but they both performed very poorly. I found that training a model on selected indicators instead of price data directly improved the performance considerably. In the future I'd like to experiment to see if sentiment analysis on live social media feed could improve the model even more for long term trends. \n\n BinancePythonAPI was used to connect to the crypto exchange. Tensorflow was used for training and evaluating the models. I also created a frontend to display the candlestick graphs using Typescript and React."
 }, {
   "type": "entry",
+  "icon": "crystal",
+  "title": "Crystal Cove",
+  "titleLink": "",
+  "subtitles": [["August 2020 - May 2021"], ["C#", "Unity"]],
+  "description": "My capstone project for my undergraduate degree was a 2D platforming game where the player could input combinations of buttons to form notes on the lute to produce different elemental effects on the environment."
+}, {
+  "type": "entry",
   "icon": "paint",
   "title": "pAInter",
   "titleLink": "https://www.youtube.com/watch?v=zJBpPzhgKyw",
