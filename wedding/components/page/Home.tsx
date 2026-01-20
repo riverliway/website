@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header } from '../header/Header'
 import { asset } from '../../utils/asset'
-import { FloralAccent } from '../common/FloralAccent'
+import { PersonFlorals } from '../common/PersonFlorals'
 
 interface PersonCardProps {
   name: string
@@ -13,8 +13,7 @@ interface PersonCardProps {
 const PersonCard: React.FC<PersonCardProps> = ({ name, role, image, description }) => (
   <div className="text-center">
     <div className="relative w-full max-w-sm mx-auto mb-6">
-      <FloralAccent className="absolute -top-6 -left-6 w-20 h-20 z-10" />
-      <FloralAccent className="absolute -bottom-6 -right-6 w-20 h-20 z-10" />
+      <PersonFlorals name={name} />
       <div className="rounded-2xl bg-purple-100 ring-4 ring-purple-200 overflow-hidden aspect-[3/4]">
         <img
           src={asset(image)}
@@ -47,7 +46,7 @@ const HeroSection: React.FC = () => (
       </p>
       <a
         href="/rsvp"
-        className="bg-purple-800 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
+        className="bg-purple-800 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg border border-black"
       >
         RSVP Now
       </a>
@@ -55,7 +54,7 @@ const HeroSection: React.FC = () => (
   </section>
 )
 
-const PEOPLE = [
+const PEOPLE: PersonCardProps[] = [
   {
     name: 'James',
     role: 'The Groom',

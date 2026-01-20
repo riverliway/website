@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NAV_ITEMS = [
-  { label: 'Home', href: '/home' },
+  { label: 'Home', href: '/' },
   { label: 'Our Story', href: '/story' },
   { label: 'RSVP', href: '/rsvp' },
 ]
