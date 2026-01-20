@@ -57,15 +57,21 @@ const HeroSection: React.FC = () => (
 
 const EventDetailsSection: React.FC = () => (
   <section className="relative py-16 px-6 overflow-hidden bg-white">
+    {/* Small screens */}
     <img
-      src={asset('fern_accent.jpg')}
-      className="absolute left-[30%] top-[1%] w-48 object-cover rotate-90"
-    />
-    <img
-      src={asset('fern_accent.jpg')}
-      className="absolute right-[30%] bottom-[1%] w-48 object-cover -rotate-90"
+      src={asset('fern_accent_small.png')}
+      className="block md:hidden w-48 object-cover mx-auto"
     />
     <div className="relative mt-20 mb-20 max-w-4xl mx-auto text-center z-10">
+      {/* Large screens */}
+      <img
+        src={asset('fern_accent.jpg')}
+        className="hidden md:block absolute left-[160px] top-[-120px] w-48 object-cover rotate-90 z-[-1]"
+      />
+      <img
+        src={asset('fern_accent.jpg')}
+        className="hidden md:block absolute right-[160px] bottom-[-120px] w-48 object-cover -rotate-90 z-[-1]"
+      />
       <h2 className="text-4xl font-serif text-purple-900 mb-8">
         Save the Date
       </h2>
@@ -81,6 +87,10 @@ const EventDetailsSection: React.FC = () => (
         11819 Bodega Hwy<br />Sebastopol CA 95472
       </a>
     </div>
+    <img
+      src={asset('fern_accent_small.png')}
+      className="block md:hidden w-48 object-cover rotate-180 mx-auto"
+    />
   </section>
 )
 
