@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from '../header/Header'
 import { asset } from '../../utils/asset'
+import { FloralAccent } from '../common/FloralAccent'
 
 interface PersonCardProps {
   name: string
@@ -11,12 +12,16 @@ interface PersonCardProps {
 
 const PersonCard: React.FC<PersonCardProps> = ({ name, role, image, description }) => (
   <div className="text-center">
-    <div className="w-full max-w-sm mx-auto mb-6 rounded-2xl bg-purple-100 ring-4 ring-purple-200 overflow-hidden aspect-[3/4]">
-      <img
-        src={asset(image)}
-        alt={name}
-        className="w-full h-full object-cover"
-      />
+    <div className="relative w-full max-w-sm mx-auto mb-6">
+      <FloralAccent className="absolute -top-6 -left-6 w-20 h-20 z-10" />
+      <FloralAccent className="absolute -bottom-6 -right-6 w-20 h-20 z-10" />
+      <div className="rounded-2xl bg-purple-100 ring-4 ring-purple-200 overflow-hidden aspect-[3/4]">
+        <img
+          src={asset(image)}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
+      </div>
     </div>
     <h3 className="text-2xl font-serif text-purple-900 mb-2">{name}</h3>
     <p className="text-purple-600 mb-4">{role}</p>
