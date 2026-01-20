@@ -11,7 +11,7 @@ interface PersonCardProps {
 
 const PersonCard: React.FC<PersonCardProps> = ({ name, role, image, description }) => (
   <div className="text-center">
-    <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-purple-100 ring-4 ring-purple-200 overflow-hidden">
+    <div className="w-full max-w-sm mx-auto mb-6 rounded-2xl bg-purple-100 ring-4 ring-purple-200 overflow-hidden aspect-[3/4]">
       <img
         src={asset(image)}
         alt={name}
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => (
       alt="Wedding hero"
       className="absolute inset-0 w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-purple-950/40" />
+    <div className="absolute inset-0 bg-black/40" />
     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
       <h1 className="text-5xl md:text-7xl font-serif mb-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.5)]">
         James & River's Wedding
@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => (
       </p>
       <a
         href="/rsvp"
-        className="bg-purple-700 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-800 transition-colors shadow-lg"
+        className="bg-purple-800 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
       >
         RSVP Now
       </a>
@@ -54,14 +54,26 @@ const PEOPLE = [
   {
     name: 'James',
     role: 'The Groom',
-    image: 'james.jpg',
+    image: 'headshot_james.jpg',
     description: "Add a description about James here. Share hobbies, profession, or what he's most excited about for the wedding.",
   },
   {
     name: 'River',
     role: 'The Bride',
-    image: 'river.jpg',
+    image: 'headshot_river.jpg',
     description: "Add a description about River here. Share hobbies, profession, or what she's most excited about for the wedding.",
+  },
+  {
+    name: 'Casey',
+    role: "James's Maid of Honor",
+    image: 'headshot_casey.jpg',
+    description: "Add a description about Casey here. Share hobbies, profession, or what she's most excited about for the wedding.",
+  },
+  {
+    name: 'Nick',
+    role: "River's Best Man",
+    image: 'headshot_nick.jpg',
+    description: "Add a description about Nick here. Share hobbies, profession, or what he's most excited about for the wedding.",
   },
 ]
 
