@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../header/Header'
 import { asset } from '../../utils/asset'
 import { PersonFlorals } from '../common/PersonFlorals'
+import { Link } from '../common/Link'
 
 
 interface PersonCardProps {
@@ -78,14 +79,14 @@ const EventDetailsSection: React.FC = () => (
       <p className="text-2xl text-gray-700 mb-4">
         July 11th, 2026 at 3:00 PM
       </p>
-      <a
+      <Link
         href="https://maps.app.goo.gl/rB3Lw99QJcVaNoNPA"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-medium transition-colors"
+        className="inline-flex items-center gap-2 font-medium"
       >
-        11819 Bodega Hwy<br />Sebastopol CA 95472
-      </a>
+        11819 Bodega Hwy<br />Sebastopol, CA 95472
+      </Link>
     </div>
     <img
       src={asset('fern_accent_small.png')}
