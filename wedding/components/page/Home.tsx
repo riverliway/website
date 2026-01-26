@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => (
         Please RSVP below to let us know you'll be joining us.
       </p>
       <a
-        href="/rsvp"
+        href="https://forms.gle/67xtQS5MwLowRDgA8"
         className="bg-purple-800 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg border border-black"
       >
         RSVP Now
@@ -98,13 +98,13 @@ const PEOPLE: PersonCardProps[] = [
     name: 'James',
     role: 'The Groom',
     image: 'headshot_james.jpg',
-    description: "Add a description about James here. Share hobbies, profession, or what he's most excited about for the wedding.",
+    description: "",
   },
   {
     name: 'River',
     role: 'The Bride',
     image: 'headshot_river.jpg',
-    description: "Add a description about River here. Share hobbies, profession, or what she's most excited about for the wedding.",
+    description: "As a software engineer and avid traveler, River has explored nearly 50 countries. She loves drawing, hiking, and teaching others about the wonderful world of science.",
   },
   {
     name: 'Casey',
@@ -113,10 +113,10 @@ const PEOPLE: PersonCardProps[] = [
     description: "Add a description about Casey here. Share hobbies, profession, or what she's most excited about for the wedding.",
   },
   {
-    name: 'Nick',
+    name: 'Nicolas',
     role: "River's Best Man",
     image: 'headshot_nick.jpg',
-    description: "Add a description about Nick here. Share hobbies, profession, or what he's most excited about for the wedding.",
+    description: "Part-time magician, full-time jokester. Nicolas has been River's best friend since high school. He shares her interests in chess, video games, everything else nerdy.",
   },
 ]
 

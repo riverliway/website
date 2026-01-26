@@ -13,10 +13,10 @@ const HeroSection: React.FC = () => (
     <div className="absolute inset-0 bg-black/40" />
     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
       <h1 className="text-5xl md:text-7xl font-serif mb-4 [text-shadow:_0_4px_8px_rgba(0,0,0,0.7)]">
-        Travel
+        Visiting Sonoma
       </h1>
       <p className="text-xl md:text-2xl max-w-2xl [text-shadow:_0_4px_8px_rgba(0,0,0,0.7)]">
-        Everything you need to know about getting to Sebastopol and making the most of your visit.
+        Everything you need to know about getting to Sebastopol and making the most of your visit
       </p>
     </div>
   </section>
@@ -145,7 +145,7 @@ const ThingsToDoSection: React.FC = () => (
       <div className="space-y-4">
         <h3 className="text-xl font-semibold text-purple-800">Wine & Food</h3>
         <ul className="space-y-2 text-gray-600">
-          <li>• Wine tasting in Healdsburg or Sonoma Plaza</li>
+          <li>• Wine tasting in Healdsburg or Kenwood</li>
           <li>• The Barlow: food, art, and craft beverages in Sebastopol</li>
           <li>• Farm-to-table dining throughout the region</li>
         </ul>

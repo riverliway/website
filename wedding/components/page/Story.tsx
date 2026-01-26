@@ -40,7 +40,7 @@ const TripCard: React.FC<TripCardProps> = ({ title, location, description, image
       <p className="text-purple-600 font-medium mb-2">{location}</p>
       <h3 className={`text-2xl font-serif ${highlight ? 'text-purple-900' : 'text-gray-800'}`}>
         {title}
-        {highlight && <span className="ml-2 text-pink-500">💍</span>}
+        {highlight && <span className="ml-2 text-pink-500">&#x1F48D;</span>}
       </h3>
     </div>
     <div className="flex flex-wrap justify-center gap-4">
@@ -65,7 +65,7 @@ const TRIPS: TripCardProps[] = [
   {
     title: 'First Trip Together',
     location: 'Ireland',
-    description: 'Our first adventure abroad together. We explored the rolling green hills, ancient castles, and cozy pubs of the Emerald Isle.',
+    description: 'Three months after we met, River departed for a summer trip to Europe. James took a chance to join her on the Emerald Isle. We explored the rolling green hills, ancient castles, and cozy pubs together.',
     images: [
       { src: 'trip_ireland_1.jpg' },
       { src: 'trip_ireland_2.jpg' },
@@ -75,9 +75,9 @@ const TRIPS: TripCardProps[] = [
     ],
   },
   {
-    title: 'Fire and Ice',
+    title: 'Arctic Wonders',
     location: 'Iceland & Greenland',
-    description: 'From the dramatic landscapes of Iceland to the remote beauty of Greenland, we chased waterfalls, climbed glaciers, and camped out in the midnight sun.',
+    description: 'We rented a camper van to roadtrip around the dramatic landscapes of Iceland before hopping over to the remote beauty of Greenland. We chased waterfalls, climbed glaciers, and camped out in the midnight sun.',
     images: [
       { src: 'trip_iceland_2.jpg' },
       { src: 'trip_iceland_1.jpg' },
@@ -89,7 +89,7 @@ const TRIPS: TripCardProps[] = [
   {
     title: 'Romance in France',
     location: 'France',
-    description: 'Strolling through Paris, exploring the historic streets of Dinan, and savoring every pastry along the way.',
+    description: 'After a semester of studying French, we hopped across the pond to spend time with friends. We spent our days strolling through Paris, exploring the historic streets of Dinan, and savoring every pastry along the way.',
     images: [
       { src: 'trip_france_1.jpg' },
       { src: 'trip_france_2.jpg' },
@@ -101,7 +101,7 @@ const TRIPS: TripCardProps[] = [
   {
     title: 'Land of the Rising Sun',
     location: 'Japan',
-    description: 'Sumo wrestlers, ancient temples, and incredible food. Japan captured our hearts with its perfect blend of tradition and modernity.',
+    description: 'Sumo wrestlers, ancient temples, and incredible food. River was an exchange student in Japan during college and took delight in showing James around a country she has come to love deeply.',
     images: [
       { src: 'trip_japan_1.jpg' },
       { src: 'trip_japan_2.jpg', span: 2 },
@@ -113,7 +113,7 @@ const TRIPS: TripCardProps[] = [
   {
     title: 'The Proposal',
     location: 'Brazil, Argentina, and Paraguay',
-    description: 'Against the backdrop of breathtaking South American landscapes, we took the next step in our journey together.',
+    description: "Iguazu's roaring falls provided the perfect soundtrack for a life-changing question. Against the backdrop of breathtaking South American landscapes, we took the next step in our journey together.",
     images: [
       { src: 'trip_brazil_1.jpg', span: 2  },
       { src: 'trip_brazil_2.jpg' },
