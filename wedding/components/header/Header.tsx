@@ -4,7 +4,6 @@ const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Our Story', href: '/story' },
   { label: 'Travel', href: '/travel' },
-  { label: 'RSVP', href: '/rsvp' },
 ]
 
 export const Header: React.FC = () => {

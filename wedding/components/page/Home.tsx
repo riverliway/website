@@ -81,8 +81,6 @@ const EventDetailsSection: React.FC = () => (
       </p>
       <Link
         href="https://maps.app.goo.gl/rB3Lw99QJcVaNoNPA"
-        target="_blank"
-        rel="noopener noreferrer"
         className="inline-flex items-center gap-2 font-medium"
       >
         11819 Bodega Hwy<br />Sebastopol, CA 95472
