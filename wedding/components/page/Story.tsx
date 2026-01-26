@@ -21,11 +21,16 @@ const HeroSection: React.FC = () => (
   </section>
 )
 
+interface TripImage {
+  src: string
+  span?: 2
+}
+
 interface TripCardProps {
   title: string
   location: string
   description: string
-  images: [string, string, string]
+  images: TripImage[]
   highlight?: boolean
 }
 
@@ -38,13 +43,16 @@ const TripCard: React.FC<TripCardProps> = ({ title, location, description, image
         {highlight && <span className="ml-2 text-pink-500">💍</span>}
       </h3>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="flex flex-wrap justify-center gap-4">
       {images.map((image, i) => (
-        <div key={i} className="rounded-xl overflow-hidden">
+        <div
+          key={i}
+          className={`rounded-xl overflow-hidden w-full ${image.span === 2 ? 'md:w-[calc(50%-0.5rem)]' : 'md:w-[calc(33.333%-0.67rem)]'}`}
+        >
           <img
-            src={asset(image)}
+            src={asset(image.src)}
             alt={`${title} ${i + 1}`}
-            className="w-full h-full md:h-96 object-cover"
+            className="w-full h-max md:h-96 object-cover"
           />
         </div>
       ))}
@@ -58,31 +66,61 @@ const TRIPS: TripCardProps[] = [
     title: 'First Trip Together',
     location: 'Ireland',
     description: 'Our first adventure abroad together. We explored the rolling green hills, ancient castles, and cozy pubs of the Emerald Isle.',
-    images: ['trip_ireland_1.jpg', 'trip_ireland_2.jpg', 'trip_ireland_3.jpg'],
+    images: [
+      { src: 'trip_ireland_1.jpg' },
+      { src: 'trip_ireland_2.jpg' },
+      { src: 'trip_ireland_3.jpg' },
+      { src: 'trip_ireland_5.jpg' },
+      { src: 'trip_ireland_4.jpg', span: 2 },
+    ],
   },
   {
     title: 'Fire and Ice',
     location: 'Iceland & Greenland',
-    description: 'From the dramatic landscapes of Iceland to the remote beauty of Greenland, we chased waterfalls, glaciers, and the northern lights.',
-    images: ['trip_iceland_1.jpg', 'trip_iceland_2.jpg', 'trip_iceland_3.jpg'],
+    description: 'From the dramatic landscapes of Iceland to the remote beauty of Greenland, we chased waterfalls, climbed glaciers, and camped out in the midnight sun.',
+    images: [
+      { src: 'trip_iceland_2.jpg' },
+      { src: 'trip_iceland_1.jpg' },
+      { src: 'trip_iceland_3.jpg' },
+      { src: 'trip_iceland_4.jpg', span: 2 },
+      { src: 'trip_iceland_5.jpg', span: 2 },
+    ],
   },
   {
     title: 'Romance in France',
     location: 'France',
-    description: 'Strolling through Paris, exploring the lavender fields of Provence, and savoring every croissant along the way.',
-    images: ['trip_france_1.jpg', 'trip_france_2.jpg', 'trip_france_3.jpg'],
+    description: 'Strolling through Paris, exploring the historic streets of Dinan, and savoring every pastry along the way.',
+    images: [
+      { src: 'trip_france_1.jpg' },
+      { src: 'trip_france_2.jpg' },
+      { src: 'trip_france_3.jpg' },
+      { src: 'trip_france_4.jpg', span: 2 },
+      { src: 'trip_france_5.jpg', span: 2 },
+    ],
   },
   {
     title: 'Land of the Rising Sun',
     location: 'Japan',
-    description: 'Cherry blossoms, ancient temples, and incredible food. Japan captured our hearts with its perfect blend of tradition and modernity.',
-    images: ['trip_japan_1.jpg', 'trip_japan_2.jpg', 'trip_japan_3.jpg'],
+    description: 'Sumo wrestlers, ancient temples, and incredible food. Japan captured our hearts with its perfect blend of tradition and modernity.',
+    images: [
+      { src: 'trip_japan_1.jpg' },
+      { src: 'trip_japan_2.jpg', span: 2 },
+      { src: 'trip_japan_3.jpg' },
+      { src: 'trip_japan_4.jpg' },
+      { src: 'trip_japan_5.jpg' },
+    ],
   },
   {
     title: 'The Proposal',
-    location: 'Brazil',
-    description: 'Against the backdrop of breathtaking Brazilian landscapes, we took the next step in our journey together.',
-    images: ['trip_brazil_1.jpg', 'trip_brazil_2.jpg', 'trip_brazil_3.jpg'],
+    location: 'Brazil, Argentina, and Paraguay',
+    description: 'Against the backdrop of breathtaking South American landscapes, we took the next step in our journey together.',
+    images: [
+      { src: 'trip_brazil_1.jpg', span: 2  },
+      { src: 'trip_brazil_2.jpg' },
+      { src: 'trip_brazil_3.jpg' },
+      { src: 'trip_brazil_4.jpg' },
+      { src: 'trip_brazil_5.jpg' },
+    ],
     highlight: true,
   },
 ]
