@@ -52,7 +52,7 @@ const TripCard: React.FC<TripCardProps> = ({ title, location, description, image
           <img
             src={asset(image.src)}
             alt={`${title} ${i + 1}`}
-            className="w-full h-max md:h-96 object-cover"
+            className="w-full md:h-96 object-cover"
           />
         </div>
       ))}
