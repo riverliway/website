@@ -29,7 +29,7 @@ export const PersonFlorals: React.FC<PersonFloralsProps> = ({ name }) => {
           <FloralAccent className="absolute -bottom-4 -left-6 w-[5.5rem] h-[5.5rem] z-10 rotate-[60deg]" variant="teal" />
         </>
       )
-    case 'Nick':
+    case 'Nicholas':
       return (
         <>
           <FloralAccent className="absolute -top-6 -left-8 w-[4.5rem] h-[4.5rem] z-10 rotate-[45deg]" variant="teal" />

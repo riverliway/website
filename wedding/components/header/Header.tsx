@@ -4,6 +4,7 @@ const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Our Story', href: '/story' },
   { label: 'Visiting Sonoma', href: '/travel' },
+  { label: 'Registry', href: 'https://www.honeyfund.com/site/way-way-07-11-2026' },
 ]
 
 const MenuIcon: React.FC = () => (
@@ -24,7 +25,7 @@ export const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#cbbddb]/95 backdrop-blur-sm shadow-sm">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/home" className="text-xl font-serif text-gray-800">
+        <a href="/" className="text-xl font-serif text-gray-800">
           J & R
         </a>
 
@@ -35,6 +36,8 @@ export const Header: React.FC = () => {
               <a
                 href={item.href}
                 className="text-gray-600 hover:text-gray-900 hover:bg-purple-600/15 px-6 py-4 rounded-lg transition-colors font-medium"
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
                 {item.label}
               </a>
@@ -60,6 +63,8 @@ export const Header: React.FC = () => {
               <li key={item.href}>
                 <a
                   href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="block text-gray-700 hover:text-gray-900 hover:bg-purple-600/15 px-3 py-2 rounded-lg transition-colors font-medium"
                   onClick={() => setIsOpen(false)}
                 >

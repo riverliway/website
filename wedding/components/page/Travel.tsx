@@ -47,14 +47,14 @@ const AirportsSection: React.FC = () => (
           Recommended for guests flying from another country.
         </p>
         <p className="text-gray-600">
-          There is a direct shuttle service from SFO to Sonoma County by <Link href="https://groometransportation.com/sonoma-county/sfo-oak/#tablepress-298_wrapper" className="underline">Goome</Link>.
+          There is a direct shuttle service from SFO to Sonoma County by <Link href="https://groometransportation.com/sonoma-county/sfo-oak/#tablepress-298_wrapper" className="underline">Groome</Link>.
         </p>
       </div>
       <div className="bg-blue-50 rounded-xl p-6">
         <Link href="https://maps.app.goo.gl/y55V9drL9Fb7NpCK7" className="text-xl font-semibold mb-2 block">
           Sonoma County (STS)
         </Link>
-        <p className="text-gray-600 mb-2">~20 minutes from venue</p>
+        <p className="text-gray-600 mb-2">~30 minutes from venue</p>
         <p className="text-gray-600">
           A smaller regional airport right in Santa Rosa. 
           Fewer flight options but much closer to the venue for those with family or friends in the area.

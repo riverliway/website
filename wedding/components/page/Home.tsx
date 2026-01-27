@@ -48,6 +48,8 @@ const HeroSection: React.FC = () => (
       </p>
       <a
         href="https://forms.gle/67xtQS5MwLowRDgA8"
+        rel='noopener noreferrer'
+        target='_blank'
         className="bg-purple-800 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg border border-black"
       >
         RSVP Now
