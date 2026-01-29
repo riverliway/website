@@ -100,7 +100,7 @@ const PEOPLE: PersonCardProps[] = [
     name: 'James',
     role: 'The Groom',
     image: 'headshot_james.jpg',
-    description: "",
+    description: "Being a talented artist and patient teacher, James has a passion for the exploration of patterns. You'll likely find him in the kitchen baking brownies, or mastering every game - both computer and tabletop.",
   },
   {
     name: 'River',
