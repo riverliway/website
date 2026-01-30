@@ -112,13 +112,13 @@ const PEOPLE: PersonCardProps[] = [
     name: 'Casey',
     role: "James's Maid of Honor",
     image: 'headshot_casey.jpg',
-    description: "Add a description about Casey here. Share hobbies, profession, or what she's most excited about for the wedding.",
+    description: "While mechanical engineering is her expertise, Casey is also a talented artist and mother of two. She shares James's love for puzzles and games, happy to challenge her brother at any time.",
   },
   {
     name: 'Nicolas',
     role: "River's Best Man",
     image: 'headshot_nick.jpg',
-    description: "Part-time magician, full-time jokester. Nicolas has been River's best friend since high school. He shares her interests in chess, video games, everything else nerdy.",
+    description: "Part-time magician, full-time jokester. Nicolas has been River's best friend since high school. He has become her rival in chess, video games, anything else nerdy.",
   },
 ]
 
